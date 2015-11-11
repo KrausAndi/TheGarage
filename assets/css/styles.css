@@ -1,0 +1,273 @@
+html{
+    font-family: Arial, Helvetica, sans-serif!important;
+}
+.hidden{
+    display: none!important;
+}
+
+.logo{
+    padding:15px;
+    font-weight: bold;
+    font-size: 3em;
+}
+/*navigation*/ 
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}  
+a{
+    text-decoration: none;
+    color: #666666;
+}
+
+
+.alert{
+    background-color: crimson!important;
+}
+.successful{
+    background-color: lightgreen!important;
+}
+.ng-scope{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    min-height: 50px;
+    border-top: 15px solid black;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 10px;
+}
+#menu-wrapper, #menu-btn-wrapper {  
+    display: inline-block;  
+    width: 50%;  
+}   
+#menu-btn-wrapper {  
+    text-align: right;  
+}  
+#menu-btn, #menu-wrapper h1 {  
+    vertical-align: middle; 
+    float:left;
+    color: #0A7AD3;
+    background: none;
+    border: none;
+}  
+#main-nav{
+    width:100%;
+}
+#main-nav > ul, .filter-nav > ul {  
+    max-height: 0em;  
+    overflow: hidden;  
+}  
+ #main-nav.active > ul, .filter-nav.active > ul {  
+    max-height: 30em;
+    margin-left: 10%;
+    margin-top: -24px; 
+}  
+.nav-li {  
+    text-align: left;  
+}  
+/* (entire screen) */  
+.nav-li a {  
+    display: block;
+    padding: 0 15px;
+}
+.nav-li a:hover, .nav-li a:active, .nav-li a:focus,{
+    color: #262626;
+}
+.search{
+    color:#B3612E;
+}
+.search>.fa{
+    position: relative;
+    top: 22px;
+    left: 3px;
+}
+.search-filter{
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    font-size: 1.2em;
+    padding-left: 40px;
+    background-color: #FFF2E7;
+    border:none;
+    margin-top: -15px;
+    
+}
+.table{
+    width: 100%;
+    margin-top: 1px;
+}
+
+.table tr, .table th{
+    background-color: lightgrey;
+    border: none;
+    margin-bottom: 5px;
+    height: 43px;
+    line-height: 43px;
+    font-size: 0.9em;
+    border-bottom: 5px solid #ffffff;
+}
+.table td{
+    padding: 0 15px 0 15px;
+}
+.right-text{
+    text-align: right!important;
+    position: relative;
+    right:0;
+}
+
+.level-container .nav-li{
+    color: #B3612E;
+    list-style: disc;
+    margin:5px;
+    text-align: left;
+}
+.nav-li>.fa{
+    font-size: 0.9em;
+}
+.level-container .list-heading{
+    margin: 5px;
+    font-weight: bold;
+}
+
+
+.traffic-header{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.garageview div, .traffic-header{
+    background-color: lightgrey;
+    border: none;
+    margin-bottom: 5px;
+    
+    line-height: 24px;
+    font-size: 0.9em;
+    padding: 0 15px;
+    
+}
+.traffic-header{
+    line-height: 40px;
+}
+.settings{
+    float:right;
+    margin: 15px;
+    
+}
+.settings i{
+    color: #000000;
+}
+.set{
+    float: right;
+    width: 100px;
+    position: relative;
+    top: -46px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 1em;
+}
+.th{
+    height: 43px;
+    padding-top: 0!important;
+    margin-top: 34px;
+    position: relative;
+}
+.setbutton{
+    width: 60%;
+    margin: -5px 20% 25px 20%;
+    height: 35px;
+    font-size: 1.1em!important;
+}
+.garageview .entry, .garageview .exit{
+    min-height: 214px;
+}
+.viewtoggle{
+    position: relative;
+    right: -95%;
+    top:-30px;
+    cursor: pointer;
+    z-index: 1;
+}
+.show{
+    top: -30px;
+}
+/* (555px) */  
+@media (min-width: 34.688em) {  
+    #menu-btn-wrapper {  
+        display: none;  
+    }  
+    #main-nav > ul {  
+        max-height: 30em;  
+    }  
+    .nav-li {  
+        width: 50%;  
+        float: left;  
+        display: inline-block;  
+    } 
+    .level-container{
+        display: block; 
+    }
+    .level-container .nav-li {   
+        width:100%;
+        display: block;  
+        text-align: left;
+    } 
+    .garageview div,.garageview p, .traffic-header{
+        margin-left: 0;
+    }
+    .th {
+    margin-top: 69px;
+    }
+    
+}  
+
+/* (770px) */  
+@media (min-width: 48.125em) {  
+    
+    #main-nav {  
+        display: inline-block;  
+        margin-left: -5px;  
+        text-align: right;  
+    }  
+    .nav-li {  
+        float: left;  
+        width: 50%;  
+    }
+    .fc{
+        display: flex;
+    }
+    .search-filter{
+        width: 80%;
+    }
+    .filter-container{
+        width: 30%;
+        float: left;
+    }
+    .fc hr{
+        display: none;
+    }
+    
+    .list-container{
+        width: 70%;
+        float: right;
+        position: relative;
+        top:16px;
+    }
+    .table{
+    }
+    .container{
+        padding:15px;
+    }
+    .garageview div,.garageview p, .traffic-header{
+    
+        width: 60%;
+        margin-left: 19.6%;
+    }
+    .surveillance{
+        top: -67px;
+        position: relative;
+        width: 137%;
+        display: block;
+        left: -31%;
+    }
+    .viewtoggle{
+        display: none;
+    }
+}

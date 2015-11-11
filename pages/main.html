@@ -1,0 +1,80 @@
+<div ng-controller="mainController">
+    <div class="container fc">
+        <div class="filter-container">
+            <i class="fa fa-minus viewtoggle" title="Hide Surveillance"></i>
+            <i class="fa fa-plus hidden show viewtoggle" title="Show Surveillance"></i>
+
+            <div class="container surveillance">
+                <div class="garageview garage_in">
+                    <h2 class="traffic-header th">Surveillance Entry</h2>
+                    <div ng-model="trafficMessage" class="entry"><h3>{{ trafficMessage }}</h3></div>
+
+                    <div class=""><h3>Destination: {{ slotMessage }}</h3></div>
+                </div>
+                <hr />
+                <div class="garageview garage_out">
+                    <h2 class="traffic-header">Surveillance Exit</h2>
+                    <div ng-model="trafficMessage2" class="exit"><h3>{{ trafficMessage2 }}</h3></div>
+                    
+                </div>
+                <div class="garageview garage_out">
+                    <h2 class="traffic-header">Occupation</h2>
+                    <div ng-model="trafficMessage2" class=""><h3>{{message2}}</h3></div>
+                </div>
+                <div class="garageview garage_out">
+                    <h2 class="traffic-header">Sales Overview</h2>
+                    <div ng-model="trafficMessage2" class=""><h3>{{ sales }}</h3></div>
+                </div>
+
+            </div>
+
+            <div class="container garageview surveillance garage_in">
+                <h2 class="traffic-header">Settings <i class="fa fa-cogs fa-lg right"></i></h2>
+                <div class="">
+                    <h3>Number of Levels</h3>
+                    <h4>now:{{ defaultLevels }}</h4>
+                    <input class="set" ng-model="defaultLevels" type="number" min="1" step="1"/></div>
+                <div class="">
+                    <h3>Number of Car-Slots/Level</h3>
+                    <h4>now:{{ defaultCarSlots }}</h4>
+                    <input class="set" ng-model="defaultCarSlots" type="number" min="0" step="1"/> </div>
+                <div class="">
+                    <h3>Number of Bike-Slots/Level</h3>
+                    <h4>now:{{ defaultBikeSlots }}</h4>
+                    <input class="set" ng-model="defaultBikeSlots" type="number" min="0" step="1"/> </div>
+                <div><input class="setbutton" ng-click="setSettings()" type="button" value="Submit"/></div>
+            </div>
+
+        </div>
+        <hr />
+        <div class="list-container">
+            <div>
+                <table ng-table="tableParams" show-filter="false" class="table">
+                    <tr ng-repeat="vehicle in vehicles">
+
+                        <td title="'Level/Slot'" sortable="false" filter="{ 'parkingslot': 'text' }" align="center" valign="middle">
+                            {{ vehicle.parkingslot }}
+                        </td>
+                        
+                        <td title="'Type'" sortable="false" filter="{ 'type': 'text' }" align="center" valign="middle">
+                            {{ vehicle.type }}
+                        </td>
+
+                        <td title="'License Plate'" sortable="false" filter="{ 'plate': 'text' }" align="center" valign="middle">
+                            {{ vehicle.plate }}
+                        </td>
+
+                        <td title="'Brand'" sortable="false" filter="{ 'brand': 'text' }" align="center" valign="middle">
+                            {{ vehicle.brand }}
+                        </td>
+
+                        <td title="'Parking Time (min)'" sortable="false" filter="{ 'parkingtime': 'number' }" align="center" valign="middle">
+                            {{ vehicle.parkingtime }}  <i class="fa fa-clock-o right-text"></i>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

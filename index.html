@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="garageApp" class="no-js">
+    <head>
+        <title>The Garage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+        <!--FontAwesome-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.7/angular-route.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="assets/ng-table-master/dist/ng-table.css">
+         <!-- CustomCSS -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <!-- Angular -->
+        <!-- CustomJS -->
+        <script src="assets/js/controller/main.js"></script>
+        <script src="assets/js/routes/routes.js"></script>
+        <script src="assets/js/services/scripts.js"></script>
+        <script src="assets/js/services/vehicle.js"></script>
+        <script src="assets/js/services/garage.js"></script>
+        <script src="assets/ng-table-master/dist/ng-table.js"></script>
+    </head>
+    <body>
+        <h1 class="logo">The Garage</h1>
+        <header>  
+            <div id="header-wrapper">  
+                <div id="menu-wrapper">  
+                     <h2 class="lw"></h2>  
+                </div>  
+                <nav id="main-nav">  
+                    <ul>  
+                        <li class="nav-li"><a href="#/">by Andreas Kraus</a></li>
+                    </ul>  
+                </nav>  
+            </div>  
+        </header>
+        <div class="container">       
+           
+            <div ng-view></div>
+            
+		</div>
+
+    </body>
+</html>
